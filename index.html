@@ -1,0 +1,92 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>IMDb Clone</title>
+  <!-- custom css -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search-styles.css">
+  <link rel="shortcut icon" href="https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png" type="image/x-icon">
+<!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- cdn imports for font-awesome -->
+  <script src="https://kit.fontawesome.com/41f5e993c5.js" crossorigin="anonymous"></script>
+</head>
+<body class="flex-col">
+  
+  <!-- NAV BAR FOR SITE -->
+  <nav>
+    <!-- nav bar left side -->
+    <div class="flex items-center p-4 ml-9">
+      <i class="fa-solid fa-grip text-lg"></i>
+      <p class="greeting-message ml-8 text-sm"></p>
+    </div>
+
+    <!-- nav bar middle -->
+    <div class="items-center nav-brand-logo">
+      <img class="w-20 mb-2.5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png" alt="site-logo">
+    </div>
+
+    <!-- nav bar right side -->
+    <div class="flex items-center p-4 mr-9">
+      <i class="hover:text-amber-400 ease-linear duration-200 fa-solid fa-bell block text-lg"></i>
+      <i class="hover:text-neutral-600 ease-linear duration-200 fa-solid fa-gear ml-7 block text-lg settings"></i>
+    </div>
+  </nav>
+  <!-- END OF NAV BAR -->
+  
+  <!-- START OF SEARCH BAR -->
+  <main class="flex-col justify-center items-center search-implement">
+    <!-- SITE LOGO -->
+    <div class="searchbar-logo mb-20">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png" alt="" class="shadow-2xl">
+    </div>
+    <!-- END OF SITE LOGO -->
+    
+    <!-- SEARCH BAR MAIN SECTION -->
+    <div class="flex shadow-xl m-auto"  id="search-bar">
+      <input type="search" class="h-10 p-6 pl-4 text-white search-query form-control" placeholder="Search IMDB" id="movie-search-box" onkeyup="findMovies()" onclick="findMovies()">
+      <div class="bg-sky-700 search-btn flex justify-center items-center search-btn">
+        <i class="fa-solid fa-magnifying-glass text-lg block"></i>
+      </div>
+    </div>
+    <!-- END OF SEARCH BAR MAIN SECTION -->
+
+    <div class = "flex-col search-list shadow-xl" id = "search-list">
+      <!-- list here -->
+    </div>
+  </main>
+
+  <!-- MOVIE DETAILS PAGE -->
+  <section class="flex result-flex" id="result-flex">
+    <!-- After clicking search result -->
+  </section>
+
+  <div onclick="enterFavPage()" class="footer cursor-pointer hover:bg-black hover:shadow-2xl hover:border-0 hover:opacity-100 border rounded opacity-50 p-2 w-36 text-center">
+    My Favourite
+  </div>
+
+
+   <!-- FAVOURITE MOVIES PAGE -->
+   <div id="favourite-result" class="flex-col">
+    <div class="flex justify-between items-center mb-10">
+      <h1 class="text-4xl font-bold">My Favourite</h1>
+      <i onclick="clearList()" class="fa-solid fa-xmark hover:text-red-500 hover:text-xl"></i>
+    </div>
+    <div class="gap-y-20 gap-x-10 fav-list">
+      <!-- <div class="rounded-lg fav-res-img flex justify-center items-center firstchild">
+        <button>
+         <p class="remove-fav shadow-2xl"><i class="fa-solid fa-trash text-8xl"></i></p>
+        </button>
+      </div> -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- <script src="myFavourite.js"></script> -->
+  <script src="greetingMessage.js"></script>
+</body>
+</html>

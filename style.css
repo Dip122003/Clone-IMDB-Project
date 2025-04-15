@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background:black;
+    background: url("http://phandroid.com/wp-content/uploads/2011/07/imdb-banner.jpeg");
+}
+
+/* START OF NAV BAR STYLE */
+
+nav {
+    height: 80px;
+    display: flex;
+    margin-bottom: 100px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.nav-brand-logo {
+    display: none;
+}
+
+/* END OF NAV BAR STYLE */
+
+/* START OF SEARCH SETTINGS */
+#search-bar {
+    width: 778.237px;
+}
+
+#search-bar input {
+    /* width: 90%; */
+    outline: none;
+    color: black;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgba(90, 86, 86, 0.771);
+    transition: 0.2s ease border-bottom-left-radius, 0.2s ease border-bottom-right-radius; */
+}
+
+.search-query::-webkit-input-placeholder {
+    font-size: medium;
+    color: b;
+}
+
+#search-bar .search-btn { 
+    width: 10%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px; */
+}
+
+.searchbar-logo {
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar-logo img {
+    width: 300px;
+}
+
+/* END OF SEARCH SETTINGS */
+
+
+/* START OF SEARCH RESULT SUGGESTIONS */
+#search-list {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.hide-search-list{
+    display: none;
+}
+/* END OF SEARCH RESULT SUGGESTIONS */
+
+
+/* START OF FAV TILES SETTINGS */
+ .fav-tiles div { 
+    margin: auto;
+    padding: 30px 50px;
+    align-items: center;
+    justify-content: center; 
+}
+/* END OF FAV TILES SETTINGS */
+
+/* START OF MOVIE INFO SETTINGS */
+/* section {
+    height: auto;
+    margin-top: 200px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+} */
+
+#movie-image img {
+    /* /* width: 300px; */
+    height: 450px;
+    margin-left: 50px;
+    margin-right: 100px;
+    border: 5px solid white;
+} */
+
+#movie-info {
+    width: 450px;
+    height: 450px;
+    color: white;
+}
+
+#movie-info h1 {
+    color: #F6C800;
+    text-align: left;
+    font-weight: bold;
+    font-size: xx-large;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%)
+}
+
+.heart {
+    cursor:pointer;
+    margin-right: 10px;
+}
+
+#movie-info p {
+    margin: 15px 0;
+}
+
+p span {
+    font-weight: bold;
+}
+
+.mv-lang {
+    opacity: 0.7;
+    color: #F6C800;
+}
+
+#movie-info p:last-child span {
+    opacity: 1;
+    color: #F6C800;
+}
+
+#movie-info p:last-child {
+    opacity: 0.7;
+}
+
+/* END OF MOVIE INFO SETTINGS */
+
+/* START OF FAVOURITE PAGE STYLE */
+
+#favourite-result {
+    opacity: 0;
+    margin: auto;
+    width: fit-content;
+    transition: 0.1s linear opacity;
+}
+
+.fav-list {
+    display: grid;
+    margin: 0px auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fav-res-img:hover {
+    background-size: 100.9%;
+}
+
+.fav-res-img {
+    width: 350px;
+    height: 525px;
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s linear background-size;
+}
+
+.remove-fav {
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: o.2s ease opacity, o.2s ease background-color, o.2s ease color;
+}
+
+.remove-fav:hover {
+    opacity: 1;
+    background-color: black;
+    color: rgb(235, 84, 84);
+}
+
+.footer {
+    margin: auto;
+    margin-top: 300px;
+}
+
+/* END OF FAVOURITE PAGE STYLE */
+
+/* MEDIA QUERIES */
+@media only screen and (max-device-width: 1520px) {
+    #favourite-result div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-device-width: 1130px) {
+    #favourite-result div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-device-width: 741px) {
+    #search-bar {
+        width: 350px;
+    }
+
+    .greeting-message {
+        display: none;
+    }
+
+    section {
+        margin-top: 62px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    #movie-image {
+        margin-bottom: 40px;
+    }
+
+    #movie-image img {
+        width: 200px;
+        height: 300px;
+        margin: 0 100px;
+        border: 5px solid white;
+    }
+
+    #movie-info h1 {
+        text-align: center;
+    }
+
+    #movie-info {
+        width: 80%;
+    }
+
+    #movie-info p {
+        margin: 15px auto;
+    }
+
+    .footer {
+        margin-bottom: 100px;
+    }
+
+    #favourite-result > h1 {
+        margin: auto;
+        width: fit-content;
+    }
+
+    #favourite-result div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
